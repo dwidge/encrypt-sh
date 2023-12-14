@@ -1,2 +1,5 @@
 #!/bin/bash
-gpg --decrypt --batch --yes --quiet --passphrase="$1" --output "$3" "$2"
+passphrase="$1"
+encryptedFile="$2"
+decryptedFile="$3"
+gpg --decrypt --batch --yes --quiet --passphrase="$passphrase" --output "$decryptedFile" "$encryptedFile"
